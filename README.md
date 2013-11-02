@@ -109,6 +109,8 @@ it, these are the steps:
         go install
         ~/Projects/markdown-renderer/bin/markdown-renderer
 
+  1. Direct your Web browser to `http://localhost:8001` and you should
+     see the `README.md` file renderred into HTML.
 
 ### Trouble Shooting
 
