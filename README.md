@@ -91,6 +91,14 @@ it, these are the steps:
         mv nginx.conf nginx.conf.bak  # backup the configuration file.
         ln -s ~/Projects/markdown-renderer/src/github.com/wangkuiyi/markdown-renderer/nginx.conf
 
+  1. (Optional) Edit `nginx.conf` to specify the document root
+     directory to be where Markdown Renderer source code is.
+
+        location / {
+            root   /Users/wangyi/Projects/markdown-renderer/src/github.com/wangkuiyi/markdown-renderer;
+        }
+
+
   1. Start Nginx.
 
         /usr/local/nginx/sbin/nginx
@@ -102,3 +110,7 @@ it, these are the steps:
         ~/Projects/markdown-renderer/bin/markdown-renderer
 
 
+### Trouble Shooting
+
+Markdown Renderer requires that the Markdown filename matches the
+regular expression `^/([_a-zA-Z0-9]+)\\.md$)`.
